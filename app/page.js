@@ -30,58 +30,57 @@ export default function Home() {
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Start by creating a Firebase project and configure it in your{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              firebase/config
-            </code>{" "}
-            file. Add your Firebase credentials (API key, Auth domain, etc.)
-            using{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              process.env.
-            </code>{" "}
-            for environment variable safety.
+            <code className="step-code">firebase/config</code> file. Add your
+            Firebase credentials (API key, Auth domain, etc.) using{" "}
+            <code className="step-code">process.env.</code> for environment
+            variable safety.
           </li>
           <li className="mb-2">
             Define your Firebase configuration in the{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              firebase/config
-            </code>{" "}
-            file. Make sure to import and initialize Firebase using the
-            configuration from the environment variables.
+            <code className="step-code">firebase/config</code> file. Make sure
+            to import and initialize Firebase using the configuration from the
+            environment variables.
           </li>
           <li className="mb-2">
-            Add Firebase actions such as{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              get
-            </code>
-            ,{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              post
-            </code>
-            , and{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              update
-            </code>{" "}
-            in the{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              firebase/actions
-            </code>{" "}
-            file to handle CRUD operations on your Firebase data.
+            Add Firebase actions such as <code className="step-code">get</code>,{" "}
+            <code className="step-code">post</code>, and{" "}
+            <code className="step-code">update</code> in the{" "}
+            <code className="step-code">firebase/actions</code> file to handle
+            CRUD operations on your Firebase data.
           </li>
           <li className="mb-2">
-            Use the{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              .env.example
-            </code>{" "}
-            file to reference the environment variables, then create a{" "}
-            <code className="bg-black/[.05] dark:bg-[rgba(0,158,103,0.5)] hover:dark:bg-[rgba(0,158,103,1)] transition-all ease-linear duration-300 cursor-pointer px-1 py-0.5 rounded font-semibold">
-              .env
-            </code>{" "}
-            file to securely store your Firebase credentials.
+            For user authentication, use Firebase{" "}
+            <code className="step-code">firebase/auth</code> in the{" "}
+            <code className="step-code">firebase/actions</code> file to
+            implement user login, registration, and logout functionality.
+          </li>
+          <li className="mb-2">
+            To persist user sessions across page reloads, integrate Firebase's{" "}
+            <code className="step-code">onAuthStateChanged</code> method to
+            manage user authentication state in your application.
+          </li>
+          <li className="mb-2">
+            For storing and managing files (like images or documents), set up
+            Firebase <code className="step-code">firebase/storage</code> and
+            create upload/download functions in the{" "}
+            <code className="step-code">firebase/actions</code> file.
+          </li>
+          <li className="mb-2">
+            For managing data in Firestore, use Firebase{" "}
+            <code className="step-code">firebase/firestore</code> to store and
+            retrieve structured data. Define your Firestore collection structure
+            and create functions for adding, retrieving, and updating documents.
+          </li>
+          <li className="mb-2">
+            Use the <code className="step-code">.env.example</code> file to
+            reference the environment variables, then create a{" "}
+            <code className="step-code">.env</code> file to securely store your
+            Firebase credentials.
           </li>
           <li>
-            Save your files and test your Firebase connection by performing CRUD
-            operations using the defined actions and ensuring data is
-            successfully fetched, added, or updated.
+            Save your files and test your Firebase connection by performing
+            authentication, CRUD operations in Firestore, file uploads to
+            Storage, and ensuring data is properly fetched, added, or updated.
           </li>
         </ol>
 
