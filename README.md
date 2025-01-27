@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/badge/Firebase-11.2.0-blue" alt="" />
 </div>
 
-## Next.js + Firebase + js Template
+## Next.js + Firebase + JS Template
 
 This is a simple template to get you started with **Next.js** and **Firebase**. It’s perfect for building multi-functional websites with Firebase backend services like Firestore and Firebase Authentication.
 
