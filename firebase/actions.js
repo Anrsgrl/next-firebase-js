@@ -7,8 +7,13 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { useState } from "react";
-import { db } from "./config";
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { db, storage } from "./config";
+import {
+  deleteObject,
+  getDownloadURL,
+  ref,
+  uploadBytes,
+} from "firebase/storage";
 
 //? Firestore functions
 
@@ -80,8 +85,7 @@ export const deleteImage = async (fileName) => {
   const fileRef = ref(storage, fileName);
   try {
     await deleteObject(fileRef);
-    toast.success(`Image deleted`);
   } catch (error) {
-    toast.error(`Failed to delete image: ${error.message}`);
+    console.error(`Failed to delete image: ${error.message}`);
   }
 };
